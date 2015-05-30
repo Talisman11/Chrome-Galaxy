@@ -1,0 +1,31 @@
+{
+ "manifest_version": 2,
+
+ "name": "Chrome Galaxy33333 ",
+ "description": "CS196 Project",
+ "version": "0.1",
+
+"content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["jquery-1.11.1.min.js"]
+}],
+
+"background": {
+      "page":"backgroundPage.html"
+ },
+
+
+ "browser_action": {
+   "default_icon": "universe.png",
+    "default_popup":"backgroundPage.html"
+ },
+
+
+ "permissions":[
+      "tabs",
+      "storage"
+ ],
+
+ "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+
+}
